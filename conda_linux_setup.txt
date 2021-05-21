@@ -1,0 +1,32 @@
+# Initialise environment
+conda create -y -n pytorch python=3.7
+conda activate pytorch
+
+# Please download packages compatible to your device, refer to Pytorch. 
+# also can view `conda search <package> --channel <channelname>`
+# for example, `conda search cudnn --channel anaconda` to find compatible version number to install
+conda install -y numpy pandas scikit-learn matplotlib seaborn
+conda install -y -c anaconda statsmodels
+
+conda install -y -c anaconda cudnn=7.6.5=cuda10.0_0
+conda install -y pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=10.0 -c pytorch
+conda install -y -c huggingface transformers
+conda install -y -c huggingface tokenizers=0.10.1=py37_0
+conda install -y -c conda-forge importlib_metadata
+
+conda install -y -c conda-forge kneed
+conda install -y -c anaconda networkx
+conda install -y -c conda-forge python-louvain
+conda install -y -c conda-forge hdbscan
+conda install -y -c conda-forge fuzzywuzzy
+conda install -y -c anaconda nltk
+conda install -y -c anaconda gensim
+conda install -y smart_open==2.0.0
+
+# conda stanza has issues! revert to pip form
+# RuntimeError: Error(s) in loading state_dict for Tokenizer:
+#       Missing key(s) in state_dict: "mwt_clf.weight", "mwt_clf.bias", "mwt_clf2.weight".
+pip install --no-deps stanza
+pip install contractions
+pip install google_trans_new
+pip install git+https://github.com/LoicGrobol/scorch.git
