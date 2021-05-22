@@ -13,7 +13,7 @@ import ExptSettings as settings
 import gloveLoader as gl
 import pickle
 import stanza
-nlp = stanza.Pipeline(lang='en', use_gpu=False, processors='tokenize,pos,lemma,depparse,ner')
+nlp = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse,ner')
 
 #nlp = stanza.Pipeline(lang='pt', processors='tokenize,pos,lemma,depparse')
 #use markNEREntities2 call for Portuguese
