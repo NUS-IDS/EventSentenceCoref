@@ -1,4 +1,6 @@
 We provide the extended similarity feature computation as a standalone module.
+(Please refer to "ExtendedSimilarities" in the paper)
+
 
 Requirements: Stanza library should be installed.
 Glove embeddings and stopwords list must be obtained from their sources
