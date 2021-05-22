@@ -20,7 +20,7 @@ In our implementation, we merged the three train sets together and three test se
 Similar steps are used to create test sets `all_test.json` and `all_en_test.json`.
 
 ### Extended features
-We created the "Extended similarities" features, which for now, are created separately from our pipeline. We will provide the code in due time. Nevertheless, we first upload the feature vector per article in pickle files under the folder `data/` for use.
+We created the "Extended similarities" features, which for now, are created as a standalone module separate from our pipeline. The code is provided under `src/extsimfeats`. We also upload the feature vector per article in pickle files under the folder `data/` for use.
 
 # Training & Predicting
 After obtaining the datasets, you can run in command line `python main.py` directly if your defaults are set properly. If not, to run KFolds on our best English BERT model that includes all created features introduced in our paper, run the following command:
