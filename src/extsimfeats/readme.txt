@@ -22,7 +22,7 @@ We precompute the POS/NER and dependency trees using Stanza and serialize them a
 
 Note: The code provided is for English data.
 
-For Portugues/Spanish please edit the lines suitably in KMDataLoader for stanza pipeline.
+For Portugues/Spanish please edit the lines suitably in KMDataLoader for the Stanza pipeline.
 
 Since NER library is unavailable for Portuguese at this point, the 
-call to markNEREntities should be changed to markNEREntities2
+call to markNEREntities should be changed to markNEREntities2 in the normalize function of KMDataLoader when Portuguese documents are being processed.
