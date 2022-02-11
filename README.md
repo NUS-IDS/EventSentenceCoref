@@ -1,6 +1,6 @@
 # EventSentenceCoref
 We worked on the Event sentence coreference identification (ESCI) Shared Task from Challenges and Applications of Automated Extraction of Socio-political Events from Text (CASE) @ ACL-IJCNLP 2021.
-Our paper is titled ["NUS-IDS at CASE 2021 Task 1: Improving Multilingual Event Sentence Coreference Identification With Linguistic Information"](https://aclanthology.org/2021.case-1.14.pdf).
+Our paper is titled ["NUS-IDS at CASE 2021 Task 1: Improving Multilingual Event Sentence Coreference Identification With Linguistic Information"](https://aclanthology.org/2021.case-1.14/).
 
 ### Abstract
 Event Sentence Coreference Identification (ESCI) aims to cluster event sentences that refer to the same event together for information extraction. We describe our ESCI solution developed for the ACL-CASE 2021 shared tasks on the detection and classification of socio-political and crisis event information in a multilingual setting. For a given article, our proposed pipeline comprises of an accurate sentence pair classifier that identifies coreferent sentence pairs and subsequently uses these predicted probabilities to cluster sentences into groups. Sentence pair representations are constructed from fine-tuned BERT embeddings plus POS embeddings fed through a BiLSTM model, and combined with linguistic-based lexical and semantic similarities between sentences. Our best models ranked 2nd, 1st and 2nd and obtained CoNLL F1 scores of 81.20%, 93.03%, 83.15% for the English, Portuguese and Spanish test sets respectively in the ACL-CASE 2021 competition.
@@ -33,3 +33,21 @@ After obtaining the datasets, you can run in command line `python main.py` direc
 ```
 We also provided some example commands under `en_tuning.sh` to create validation results found under Table 2 in our paper.
 
+# Cite Us
+```
+@inproceedings{tan-etal-2021-nus,
+    title = "{NUS}-{IDS} at {CASE} 2021 Task 1: Improving Multilingual Event Sentence Coreference Identification With Linguistic Information",
+    author = "Tan, Fiona Anting  and
+      Gollapalli, Sujatha Das  and
+      Ng, See-Kiong",
+    booktitle = "Proceedings of the 4th Workshop on Challenges and Applications of Automated Extraction of Socio-political Events from Text (CASE 2021)",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.case-1.14",
+    doi = "10.18653/v1/2021.case-1.14",
+    pages = "105--112",
+    abstract = "Event Sentence Coreference Identification (ESCI) aims to cluster event sentences that refer to the same event together for information extraction. We describe our ESCI solution developed for the ACL-CASE 2021 shared tasks on the detection and classification of socio-political and crisis event information in a multilingual setting. For a given article, our proposed pipeline comprises of an accurate sentence pair classifier that identifies coreferent sentence pairs and subsequently uses these predicted probabilities to cluster sentences into groups. Sentence pair representations are constructed from fine-tuned BERT embeddings plus POS embeddings fed through a BiLSTM model, and combined with linguistic-based lexical and semantic similarities between sentences. Our best models ranked 2nd, 1st and 2nd and obtained CoNLL F1 scores of 81.20{\%}, 93.03{\%}, 83.15{\%} for the English, Portuguese and Spanish test sets respectively in the ACL-CASE 2021 competition.",
+}
+```
